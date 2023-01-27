@@ -1,0 +1,15 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.page {
+    margin: 0;
+    background-color: $white;
+    color: $dark;
+    font-family: 'Roboto Bold', sans-serif;
+}
+.is-hidden {
+    visibility: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.no-scroll {
+    overflow: hidden;
+}

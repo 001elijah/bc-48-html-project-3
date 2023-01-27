@@ -1,2 +1,12 @@
-@import './common';
-@import './example';
+@import './utils/vars';
+@import './components/common';
+@import './utils/mixins';
+@import './utils/browser-styles-reset';
+@import './components/header';
+@import './components/hero';
+@import './components/offerings';
+@import './components/favorites';
+@import './components/customers-feedback';
+@import './components/subscribe';
+@import './components/footer';
+@import './components/modal-window';
