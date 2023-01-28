@@ -1,14 +1,23 @@
 .hero__meta {
-    margin: 60px 20px 50px;
-    @media screen and(min-width:480px){
+    position: relative;
+    margin: 0 20px;
+    padding-top: 60px;
+    padding-bottom: 110px;
+
+    @media screen and(max-width:767x) {
         max-width: 420px;
     }
 
     @media screen and(min-width:768px) {
-        margin: 60px 32px 0;
+        margin: 0 32px;
+        padding-top: 60px;
+        padding-bottom: 30px;
     }
-    @media screen and(min-width:1200px){
-        margin: 159px 16px  0;
+
+    @media screen and(min-width:1200px) {
+        margin: 0 16px 0;
+        padding-top: 159px;
+        padding-bottom: 75px;
     }
 }
 
@@ -23,7 +32,9 @@
         font-size: 42px;
         line-height: 1.2;
     }
-    @media screen and(min-width:1200px){
+
+    @media screen and(min-width:1200px) {
+        width: 502px;
         font-size: 48px;
         line-height: 1.2;
     }
@@ -31,8 +42,7 @@
 
 .hero__text {
     margin-top: 28px;
-    margin-left: 14px;
-    margin-right: 14px;
+    margin-bottom: 60px;
 
     font-weight: 400;
     font-size: 14px;
@@ -40,15 +50,67 @@
     color: $main-text;
 
     @media screen and(min-width:768px) {
-        margin-top: 44px ;
+        margin-top: 44px;
+        margin-bottom: 0;
         width: 336px;
         font-size: 16px;
         line-height: 1.5;
     }
-    @media screen and(min-width:1200px){
+
+    @media screen and(min-width:1200px) {
         margin-top: 28px;
         width: 502px;
         font-size: 16px;
         line-height: 1.5;
+    }
 }
+
+.hero-img__block {
+    @media screen and(max-width:767px) {
+        display: none;
+    }
+}
+
+.hero-img__img {
+    position: absolute;
+    top: 163px;
+    right: 22px;
+    & img{
+        width: 292px;
+        height: 292px;
+    }
+        @media screen and(min-width:1200px) {
+        top: 40px;
+        right: 40px;  
+        & img{
+            width: 528px;
+            height: 528px;   }    
+    }
+}
+
+.hero-img__ell {
+    position: absolute;
+    top: 149px;
+    right: 9px;
+    & img{
+        width: 320px;
+        height: 320px;}
+    @media screen and(min-width:1200px) {
+        top: 14px;
+        right: 14px;  
+        & img{
+            width: 580px;
+            height: 580px;   }           
+    }
+}
+.hero-img__btn{
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 28px;
+    height: 34px;
+}
+.hero-img__btn--right{
+    position: absolute;
 }

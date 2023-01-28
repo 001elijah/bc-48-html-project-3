@@ -1,20 +1,62 @@
 <div class="container">
   <div class="hero">
     <div class="hero__meta">
-      <h1 class="hero__title">
-        Enjoy Your Favorite Food From Anywhere</h1>
+      <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
       <p class="hero__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
-      <div class="hero-img">
-        <div class="hero-img__img">
-            <picture>
-                <img src="" alt="">
-            </picture>
-            
-        </div>
+      <div class="hero-img__block">
+        <button type="button" class="hero-img__btn hero-img__btn--right">
+          <svg
+          class="hero-img__svg"
+          <!-- width="28"
+          height="34" -->
+        >
+          <use
+            href="./images/icons.svg#icon-right"
+          ></use>
+          </svg>
+        </button>
+        <picture class="hero-img__ell">
+          <source
+            srcset="
+              ./images/hero/Ellipse-desk-1x.png 1x,
+              ./images/hero/Ellipse-desk-2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/Ellipse-tablet-1x.png 1x,
+              ./images/hero/Ellipse-tablet-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img src="./images/hero/Ellipse-desk-1x.png" alt=""/>
+        </picture>
+        <picture class="hero-img__img">
+          <source
+            srcset="
+              ./images/hero/hero-slider-01-desk-1x.png 1x,
+              ./images/hero/hero-slider-01-desk-2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/hero-slider-01-tablet-1x.png 1x,
+              ./images/hero/hero-slider-01-tablet-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img
+            src="./images/hero/hero-slider-01-tablet-1x.png"
+            alt=""
+          />
+        </picture>
+
       </div>
     </div>
   </div>
