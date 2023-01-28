@@ -3,7 +3,13 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     <ul>
         <li>
-           <img src="../images/favorites/gamburger-desk-1x.png" alt="meals" width="224" height="224"> 
+            <picture>
+                <source srcset="../images/favorites/gamburger-desk-1x.png 1x, ../images/favorites/gamburger-desk-2x.png 2x" media="(min-width: 1200px)">
+                <source srcset="../images/favorites/gamburger-tablet-1x.png 1x, ../images/favorites/gamburger-tablet-2x.png 2x" media="(min-width: 768px)">
+                <source srcset="../images/favorites/gamburger-mobile-1x.png 1x, ../images/favorites/gamburger-mobile-2x.png 2x" media="(max-width: 767px)">
+             <img src="../images/favorites/gamburger-desk-1x.png" alt="meals" width="224" height="224">    
+            </picture>
+           
         </li>
     </ul>
 </section>
