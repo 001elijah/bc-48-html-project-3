@@ -1,13 +1,28 @@
 .feedback{
 
     @media screen and (max-width:479px){
+        min-width: 320px;
+        max-width: 479px;
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-mobile.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 60px 20px;
+        margin: 0 auto;
+
+        height: 769px; //temporary during develpoment!!!
+        width: 320px; //temporary during develpoment!!!
     }
     @media screen and (min-width:480px) and (max-width:767px){
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-480.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        padding: 60px 20px;
+        margin: 0 auto;
+
+        height: 769px; //temporary during develpoment!!!
+        width: 480px; //temporary during develpoment!!!
     }
 
     @media screen and (min-width:768px) and (max-width:1279px){
@@ -16,6 +31,12 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        padding: 60px 32px 120px 32px;
+        margin: 0 auto;
+
+        height: 544px; //temporary during develpoment!!!
+        width: 768px; //temporary during develpoment!!!
+
 
     }
     @media screen and (min-width:1280px) {
@@ -25,6 +46,7 @@
         background-position: center;
         background-size: cover;
         padding: 100px 123px 200px 16px;
+        margin: 0 auto;
 
         height: 647px; //temporary during develpoment!!!
         width: 1280px; //temporary during develpoment!!!
@@ -43,45 +65,82 @@
 
     }
     @media screen and (min-width:1280px) {
-       
+        // margin: 100px 123px 200px 16px;
        
 }
 }
 
 .feedback-title{
-    font-size: 42px;
     line-height: 1.17;
+    @media screen and (max-width:767px) {
+        font-size: 28px;
+        }
+
+    @media screen and (min-width:768px) {
+        font-size: 42px;
+        }
 }
 
 .feedback-text{
-
-    @media screen and (min-width:1280px) {
-    font-size: 16px;
     font-weight: 400;
     line-height: 1.17;
     margin-top: 20px;
     margin-bottom: 32px;
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+        }
+
+    @media screen and (min-width:768px) {
+    font-size: 16px;
     }
 }
 
 .feedback-list{
+    display: flex;
 
     @media screen and (max-width:479px){
+        flex-wrap: wrap;
+        gap:24px;
         width: 100%;
         }
 
-    @media screen and (min-width:480px){
-    display: flex;
-    gap: 139px;
+        @media screen and (min-width:480px) and (max-width:767px){
+            flex-wrap: wrap;
+            gap:24px;
+            width: 100%;
+            }
+
+    @media screen and (min-width:768px) and (max-width:1279px){
+        gap: 32px;
     padding-left: 0;
-    height: 227px;
     }
+
+    @media screen and (min-width:1280px){
+        
+        gap: 139px;
+        padding-left: 0;
+        // height: 227px;
+        }
 }
 
 .item{
-    background-color: $white;
+    
     border-radius: 0px 30px 30px 30px;
-    padding: 14px;
+    @media screen and (max-width:479px){
+        padding: 8px;
+        background-color: #FFFFFF;
+         }
+ 
+     @media screen and (min-width:480px) and (max-width:1279px){
+        padding: 14px;
+        background-color: #FFFFFF;
+     }
+ 
+     @media screen and (min-width:1280px){
+        padding: 14px;
+        background-color: $white;
+     }
+   
 }
 
 
@@ -92,9 +151,49 @@
     padding-left: 0;
 }
 
+.stars{
+    display: inline-block;
+    width:17px;
+    height: 16px;
+}
+
+.item-content{
+    line-height: 1.17;
+    font-weight: 700;
+    @media screen and (max-width:479px){
+       font-size: 16px;
+       
+        }
+
+    @media screen and (min-width:480px) and (max-width:1279px){
+    font-size: 18px;
+    }
+
+    @media screen and (min-width:1280px){
+        font-size: 18px;
+    }
+
+}
+
 .customer{
    display: flex;
+   gap: 16px;
    width: 160px;
    border-right: 1px solid $green;
    margin-top: 40px;
+}
+
+.customer-data{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items:flex-start;
+    font-size: 14px;
+    line-height: 1.5;
+
+}
+
+.customer-name{
+    font-weight: 500;
 }
