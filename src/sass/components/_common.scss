@@ -3,7 +3,7 @@
     margin: 0;
     background-color: $white;
     color: $dark;
-    font-family: 'Roboto Bold', sans-serif;
+    font-family: 'Roboto Regular', sans-serif;
 }
 .is-hidden {
     visibility: 0;
@@ -12,4 +12,66 @@
 }
 .no-scroll {
     overflow: hidden;
+}
+.button--small {
+    width: 98px;
+    height: 32px;
+
+    background: $fresh-green;
+
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+
+        background: $yellow;
+    }
+}
+.button--large {
+    width: 106px;
+    height: 40px;
+    
+    background: $white;
+    
+    border: 2px solid $green;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+
+        background: $fresh-green;
+
+        border-color: $fresh-green;
+    }
+}
+.button-subscribe--solid {
+    width: 103px;
+    height: 42px;
+
+    background: $fresh-green;
+    border-radius: 30px;
+    
+    &:hover,
+    &:focus {
+        cursor: pointer;
+
+        background: $yellow;
+    }
+}
+.button-subscribe--bordered {
+    width: 103px;
+    height: 42px;
+    
+    background: $white;
+    border: 2px solid $green;
+    border-radius: 30px;
+
+    &:hover,
+    &:focus {
+        cursor: pointer;
+        
+        border-color: $yellow;
+    }
 }
