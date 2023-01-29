@@ -7,35 +7,26 @@
         varius enim in eros elementum tristique. Duis cursus, mi quis viverra
         ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
       </p>
-      <div class="hero-img__block">
-        <button type="button" class="hero-img__btn hero-img__btn--right">
-          <svg
-          class="hero-img__svg"
-          <!-- width="28"
-          height="34" -->
-        >
-          <use
-            href="./images/icons.svg#icon-right"
-          ></use>
-          </svg>
-        </button>
-        <picture class="hero-img__ell">
-          <source
-            srcset="
-              ./images/hero/Ellipse-desk-1x.png 1x,
-              ./images/hero/Ellipse-desk-2x.png 2x
-            "
-            media="(min-width: 1200px)"
-          />
-          <source
-            srcset="
-              ./images/hero/Ellipse-tablet-1x.png 1x,
-              ./images/hero/Ellipse-tablet-2x.png 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <img src="./images/hero/Ellipse-desk-1x.png" alt=""/>
-        </picture>
+    </div>
+    <div class="hero-img__block">
+      <picture class="hero-img__ell">
+        <source
+          srcset="
+            ./images/hero/Ellipse-desk-1x.png 1x,
+            ./images/hero/Ellipse-desk-2x.png 2x
+          "
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="
+            ./images/hero/Ellipse-tablet-1x.png 1x,
+            ./images/hero/Ellipse-tablet-2x.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img src="./images/hero/Ellipse-desk-1x.png" alt="" />
+      </picture>
+      <div class="hero-img__item" id="slide showing">
         <picture class="hero-img__img">
           <source
             srcset="
@@ -51,13 +42,59 @@
             "
             media="(min-width: 768px)"
           />
-          <img
-            src="./images/hero/hero-slider-01-tablet-1x.png"
-            alt=""
-          />
+          <img src="./images/hero/hero-slider-01-tablet-1x.png" alt="" />
         </picture>
-
       </div>
+      <div class="hero-img__item">
+        <picture class="hero-img__img">
+          <source
+            srcset="
+              ./images/hero/hero-slider-02-desk-1x.png 1x,
+              ./images/hero/hero-slider-02-desk-2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/hero-slider-02-tablet-1x.png 1x,
+              ./images/hero/hero-slider-02-tablet-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img src="./images/hero/hero-slider-02-tablet-1x.png" alt="" />
+        </picture>
+      </div>
+      <div class="hero-img__item">
+        <picture class="hero-img__img">
+          <source
+            srcset="
+              ./images/hero/hero-slider-03-desk-1x.png 1x,
+              ./images/hero/hero-slider-03-desk-2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/hero-slider-03-tablet-1x.png 1x,
+              ./images/hero/hero-slider-03-tablet-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img src="./images/hero/hero-slider-03-tablet-1x.png" alt="" />
+        </picture>
+      </div>
+      <button type="button" class="hero-img__btn hero-img__btn--right" onclick="plusSlides(+1)">
+        <svg class="hero-img__svg">
+          <use href="./images/icons.svg#icon-right"></use>
+        </svg>
+      </button>
+      <button type="button" class="hero-img__btn hero-img__btn--left"  onclick="plusSlides(-1)">
+        <svg class="hero-img__svg">
+          <use href="./images/icons.svg#icon-left"></use>
+        </svg>
+      </button>
     </div>
+    <button class="oder_btn" type="button">Button green</button>
   </div>
 </div>
+<script src="./index.js"></script>
