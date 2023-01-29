@@ -61,11 +61,7 @@
 }
 
 .feedback-wrapper{
-    @media screen and (max-width:479px){
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    @media screen and (min-width:480px) and (max-width:767px){
+    @media screen and (max-width:767px){
         padding-top: 60px;
         padding-bottom: 60px;
     }
