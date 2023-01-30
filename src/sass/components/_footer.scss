@@ -4,11 +4,13 @@
 
 .footer-top {
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
 .footer-address {
   display: flex;
+  align-items: center;
 }
 
 .address-list {
@@ -65,9 +67,11 @@
 }
 
 .email-submit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-left: 13px;
+  min-width: 103px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -96,6 +100,7 @@
 }
 
 .footer-bottom {
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
 }
