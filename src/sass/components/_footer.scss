@@ -2,11 +2,15 @@
   padding: 100px 0;
 }
 
+// -----Footer top-----
+
 .footer-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
+// Logo and Navigation
 
 .footer-address {
   display: flex;
@@ -28,6 +32,8 @@
   line-height: 16px;
   color: #2c2c2c;
 }
+
+// Subscribe form
 
 .mailing-title {
   font-family: 'Roboto';
@@ -69,9 +75,6 @@
 .email-submit {
   margin-left: 13px;
   min-width: 103px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
@@ -98,6 +101,8 @@
   text-decoration-line: underline;
   color: #7eb101;
 }
+
+// -----Fotter bottom-----
 
 .footer-bottom {
   margin-top: 80px;
