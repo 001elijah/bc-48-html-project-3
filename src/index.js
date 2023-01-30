@@ -1,4 +1,5 @@
+import {funcModal} from "./js/modal";
+import {funcSlider} from "./js/slider";
 
-
-import "./js/slider";
-import"./js/modal";
+funcModal();
+funcSlider();
