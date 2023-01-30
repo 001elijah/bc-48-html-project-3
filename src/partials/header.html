@@ -4,11 +4,31 @@
             <img src="./images/foodsta-logo/foodsta-logo.png" alt="foodsta-logo" width="66" height="52">
         </a>
 
-        <button type="button" class="header-open">
-            <svg class="menu-open" width="23.33" height="16.41">
-                <use href="./images/icons.svg#icon-open"></use>
-            </svg>
-        </button>
+        <div class="mob-wrap">
+            <button type="button" class="mob-open" data-menu-open>
+                <svg class="icon-open" width="23.33" height="16.41">
+                    <use href="./images/icons.svg#icon-open"></use>
+                </svg>
+            </button>
+
+<<<<<<< Updated upstream
+            <!-- MOBILE--MENU-->
+            <div class="mob-menu is-hidden" data-menu>
+                <button type="button" class="mob-close" data-menu-close>
+                    <svg class="icon-close" width="10.76" height="10.76">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>
+                <ul class="mob list">
+                    <li class="mob-item"><a href="#" class="mob-link">Home</a></li>
+                    <li class="mob-item"><a href="#About" class="mob-link">About</a></li>
+                    <li class="mob-item"><a href="#Service" class="mob-link">Service</a></li>
+                    <li class="mob-item"><a href="#Menu" class="mob-link">Menu</a></li>
+                    <li class="mob-item"><a href="#Contact" class="mob-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+=======
 
         <!-- MOBILE--MENU-->
         <ul class="mob list">
@@ -18,18 +38,24 @@
             <li class="mob-item"><a href="#Menu" class="mob-link">Menu</a></li>
             <li class="mob-item"><a href="#Contact" class="mob-link">Contact</a></li>
         </ul>
+>>>>>>> Stashed changes
         <!-- TABLET=================== DESKTOP-->
-        <nav>
-            <ul class="nav list">
-                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#About" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="#Service" class="nav-link">Service</a></li>
-                <li class="nav-item"><a href="#Menu" class="nav-link">Menu</a></li>
-                <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-        <button type="button" class="header-button button--small">Order Now</button>
+
+        <div class="tab-wrap">
+            <nav class="nav">
+                <ul class="nav-list list">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#About" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#Service" class="nav-link">Service</a></li>
+                    <li class="nav-item"><a href="#Menu" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="#Contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="header-button button--small">Order Now</button>
+
+        </div>
     </div>
 
+    <script src="./menu.js"></script>
 
 </header>
