@@ -1,5 +1,40 @@
+.footer {
+  @include mobileSmall {
+    background-image: url('../images/footer/bgd-transparent-mobile.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 320px 619px;
+    // @include retina {
+    //   background-image: url('../../images/footer/bgd-transparent-mobile-2x.png');
+    // }
+  }
+
+  @include tablet {
+    background-image: url('../images/footer/bgd-transparent-tablet.png');
+    background-position: bottom;
+    background-size: 768px 506px;
+    background-repeat: no-repeat;
+    // @include retina {
+    //   background-image: url('../../images/footer/bgd-transparent-tablet-2x.png');
+    // }
+  }
+
+  @include desktop {
+    background-image: url('../images/footer/bgd-transparent-desk.png');
+    background-position: right 16px bottom;
+    background-size: 1211px 266px;
+    background-repeat: no-repeat;
+    // @include retina {
+    //   background-image: url('../../images/footer/bgd-transparent-desk-2x.png');
+    // }
+  }
+}
+
 .footer-container {
-  padding: 100px 0;
+  padding: 60px 0;
+  @include tablet {
+    padding: 100px 0;
+  }
 }
 
 // -----Footer top-----
@@ -7,20 +42,36 @@
 .footer-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  // justify-content: space-between;
+  @include desktop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 // Logo and Navigation
 
 .footer-address {
   display: flex;
-  align-items: center;
+  @include desktop {
+    align-items: center;
+    display: flex;
+    align-items: center;
+  }
 }
 
 .address-list {
   display: flex;
-  gap: 28px;
-  margin-left: 148px;
+  flex-direction: column;
+  gap: 20px;
+  margin-left: 81px;
+  @include desktop {
+    flex-direction: row;
+    margin-left: 148px;
+    gap: 28px;
+  }
 }
 
 .address-link {
@@ -35,6 +86,13 @@
 
 // Subscribe form
 
+.mailing {
+  margin-top: 40px;
+  @include desktop {
+    margin-top: 0;
+  }
+}
+
 .mailing-title {
   font-family: 'Roboto';
   font-style: normal;
@@ -47,8 +105,13 @@
 .email {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  @include desktop {
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 }
 
 .email-input {
@@ -56,11 +119,14 @@
   max-width: 279px;
   height: 42px;
   padding: 12px 12px;
-  margin: 12px 0;
+  margin-top: 12px;
   outline: none;
   background: #fefefe;
   border: 0.854167px solid #ffe550;
   border-radius: 30px;
+  @include desktop {
+    margin: 12px 0;
+  }
 }
 
 .email-input::placeholder {
@@ -73,7 +139,7 @@
 }
 
 .email-submit {
-  margin-left: 13px;
+  margin: 20px 0;
   min-width: 103px;
   font-family: 'Roboto';
   font-style: normal;
@@ -81,38 +147,58 @@
   font-size: 13px;
   line-height: 150%;
   color: #2c2c2c;
+  border: 0.854167px solid #7EB101;
+  @include desktop {
+    margin: 0 0 0 13px;
+  }
 }
 
 .email-text {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 10px;
+  line-height: 12px;
   color: #2c2c2c;
+  @include desktop {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 .email-link {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 10px;
+  line-height: 12px;
   text-decoration-line: underline;
   color: #7eb101;
+  @include desktop {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 // -----Fotter bottom-----
 
 .footer-bottom {
-  margin-top: 80px;
   display: flex;
-  justify-content: space-between;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  @include desktop {
+    margin-top: 80px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
 }
 
 .privacy-list {
   display: flex;
-  gap: 20px;
+
+  @include desktop {
+    gap: 20px;
+  }
 }
 
 .privacy-link {
