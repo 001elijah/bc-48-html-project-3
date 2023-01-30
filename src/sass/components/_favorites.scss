@@ -30,8 +30,16 @@
     }
 }
 .favorites-item {
+    width: 280px;
+    height: 282px;
+    @include tablet {
+    width: 336px;
+    height: 338px;    
+    }
+    @include desktop {
     width: 394px;
-    height: 397px;
+    height: 397px;    
+    }
 }
 .favorites-list {
     display: flex;
