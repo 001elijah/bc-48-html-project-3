@@ -32,7 +32,7 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 1.178;
-    color: $main-text;
+    color: $dark;
 
     @media screen and(min-width:768px) {
         width: 537px;
@@ -53,7 +53,7 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 1.5;
-    color: $main-text;
+    color: $dark;
 
     @media screen and(min-width:768px) {
         margin-top: 44px;
@@ -137,7 +137,7 @@
         width: 48px;
         height: 40px;
         &:hover{
-            fill:#7EB101;
+            fill:$green;
         }
         &:active{
             fill: black;
@@ -186,4 +186,7 @@
     @media screen and(min-width:1280px){
         bottom: 0;
     }
+   &:hover{
+    background-color: #FFE450;;
+}
 }

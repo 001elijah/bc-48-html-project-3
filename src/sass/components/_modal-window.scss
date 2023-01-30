@@ -31,7 +31,7 @@
 
     &:hover,
     &:focus {
-        fill: #7EB101;
+        fill: $green;
         cursor: pointer;
     }
 }
@@ -50,19 +50,19 @@
     width: 320px;
 
     padding: 32px 20px ;
-    background: #FFE550;
+    background: $yellow;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 30px;
 
-    @media screen and (min-width:768px)  {
+    @mixin tablet {
         width: 458px;
         height: 449px;
     }
-    // @media screen and (min-width:1260px) {
-    //     width: 458px;
-    //     height: 449px;
-    // }
+    @mixin desktop {
+         width: 458px;
+         height: 449px;
+     }
 
     transform: translate(-50%, -50%) scale(1);
     // transition: transform $trans;
@@ -76,7 +76,7 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 1.2;
-    color: #2C2C2C;
+    color: $dark;
     text-align: center;
 }
 
@@ -97,7 +97,7 @@
 
     background: #FFFFFF;
 
-    border: 1px solid #7EB101;
+    border: 1px solid $green;
     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
 
@@ -131,7 +131,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.4;
-    color: #2C2C2C;
+    color: $dark;
 
     margin-bottom: 2px;
     margin-left: 12px;
@@ -156,7 +156,7 @@
 
     background: #FFFFFF;
 
-    border: 2px solid #7EB101;
+    border: 2px solid $green;
     border-radius: 30px;
 
     font-weight: 500;
