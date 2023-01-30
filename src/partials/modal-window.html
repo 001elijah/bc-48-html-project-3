@@ -1,0 +1,45 @@
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn__close" data-modal-close>
+        <svg class="modal__svg" width="18px" height="18px">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <p class="modal__title">Order Form</p>
+      <form class="modal-form">
+        <div class="modal-form__input-block">
+          <label class="modal-form__label">
+            <span class="modal-form__title">Name</span>
+            <input
+              class="modal-form__input"
+              type="text"
+              name="name"
+              placeholder="Your name"
+            />
+          </label>
+          <label class="modal-form__label">
+            <span class="modal-form__title">Phone number</span>
+            <input
+              class="modal-form__input"
+              type="tel"
+              name="tel"
+              placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            />
+          </label>
+          <label class="modal-form__label">
+            <span class="modal-form__title">E-mail</span>
+            <input
+              class="modal-form__input"
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+            />
+        </div>
+        <button class="modal-form__button" type="submit">
+          Send
+        </button>
+      </form>
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
+  <script src="./js/slider.js"></script>
