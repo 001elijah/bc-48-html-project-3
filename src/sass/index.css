@@ -1,0 +1,48 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.page {
+  margin: 0;
+  background-color: #FEFEFE;
+  color: #2C2C2C;
+  font-family: "Roboto Bold", sans-serif;
+}
+
+.is-hidden {
+  visibility: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}/*# sourceMappingURL=index.css.map */
