@@ -26,8 +26,10 @@
     justify-content: center;
   }
   @include desktop {
+    display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    margin-bottom: 64px;
   }
 }
 
@@ -40,7 +42,6 @@
   }
   @include desktop {
     width: 608px;
-    padding-bottom: 64px;
   }
 }
 
@@ -89,9 +90,12 @@
     align-items: center;
     gap: 22px;
     margin-bottom: 100px;
-    @include desktop {
-      gap: 32px;
-    }
+  }
+  @include desktop {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 32px;
   }
 }
 
@@ -110,11 +114,13 @@
   @include tablet {
     width: 394px;
   }
+  @include desktop {
+    width: 394px;
+  }
 }
 
 .subscribe-button {
   margin-left: auto;
-  margin-top: 20px;
   min-width: 103px;
   height: 42px;
   color: #2c2c2c;
@@ -131,6 +137,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+  }
+  @include desktop {
     margin: 0;
   }
 }
