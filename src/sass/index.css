@@ -496,33 +496,48 @@ img {
 }
 
 .subscribe {
-  min-width: 280px;
-  height: 375px;
   margin: 0 auto;
-  padding: 25px 20px 60px 20px;
   background-color: #f5f5f5;
 }
-@media screen and (min-width: 768px) {
-  .subscribe {
-    width: 704px;
-    height: 340px;
-    padding: 58px 32px 100px 32px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  .subscribe {
-    width: 1247px;
-    height: 266px;
-    padding-right: 16px;
-    padding-left: 17px;
-    padding-bottom: 64px;
-  }
-}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .subscribe-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscribe-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .subscribe-wrap {
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .subscribe-img {
+    width: 161px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .subscribe-img {
+    width: 281px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .subscribe-img {
+    width: 608px;
+    padding-bottom: 64px;
   }
 }
 
@@ -564,22 +579,31 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .subscribe-form {
     display: block;
+    max-width: 767px;
+    margin: 0 auto;
   }
 }
 @media screen and (min-width: 768px) {
   .subscribe-form {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
+    gap: 22px;
+    margin-bottom: 100px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .subscribe-form {
+    gap: 32px;
   }
 }
 
 .subscribe-input {
   padding-left: 11px;
-  width: 279px;
+  width: 100%;
   height: 42px;
   background: #ffffff;
   border: 0.854167px solid #ffe550;
@@ -597,6 +621,9 @@ img {
 }
 
 .subscribe-button {
+  display: block;
+  margin-left: auto;
+  margin-top: 20px;
   min-width: 103px;
   height: 42px;
   color: #2c2c2c;
@@ -604,4 +631,17 @@ img {
   border-radius: 30px;
   border: none;
   cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+}
+@media screen and (min-width: 768px) {
+  .subscribe-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 }/*# sourceMappingURL=index.css.map */

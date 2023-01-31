@@ -1,27 +1,46 @@
 .subscribe {
-  min-width: 280px;
-  height: 375px;
   margin: 0 auto;
-  padding: 25px 20px 60px 20px;
-  background-color: #f5f5f5;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    transform: translateY(-43px);
+  }
   @include tablet {
-    width: 704px;
-    height: 340px;
-    padding: 58px 32px 100px 32px;
+    transform: translateY(-74px);
   }
   @include desktop {
-    width: 1247px;
-    height: 266px;
-    padding-right: 16px;
-    padding-left: 17px;
-    padding-bottom: 64px;
+    transform: translateY(-66px);
   }
 }
 
 .subscribe-wrap {
-  @include tablet {
+  @media screen and (min-width: 320px) and (max-width: 767px) {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 60px;
+  }
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  @include desktop {
+    align-items: center;
+    flex-direction: row-reverse;
+  }
+}
+
+.subscribe-img {
+  @include mobile {
+    width: 161px;
+  }
+  @include tablet {
+    width: 281px;
+  }
+  @include desktop {
+    width: 608px;
+    padding-bottom: 64px;
   }
 }
 
@@ -58,19 +77,27 @@
 }
 
 .subscribe-form {
-  @include mobile {
-    display: block;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
   @include tablet {
     display: flex;
-    justify-content: center;
+    flex-wrap: nowrap;
     align-items: center;
+    gap: 22px;
+    margin-bottom: 100px;
+    @include desktop {
+      gap: 32px;
+    }
   }
 }
 
 .subscribe-input {
   padding-left: 11px;
-  width: 279px;
+  width: 100%;
   height: 42px;
   background: #ffffff;
   border: 0.854167px solid #ffe550;
@@ -86,6 +113,8 @@
 }
 
 .subscribe-button {
+  margin-left: auto;
+  margin-top: 20px;
   min-width: 103px;
   height: 42px;
   color: #2c2c2c;
@@ -93,4 +122,15 @@
   border-radius: 30px;
   border: none;
   cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #2c2c2c;
+  @include tablet {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 }
