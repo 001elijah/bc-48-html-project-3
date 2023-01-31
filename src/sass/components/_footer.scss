@@ -201,6 +201,19 @@
   }
 }
 
+.email-error {
+  display: none;
+  margin-top: 4px;
+  align-items: center;
+}
+
+.error-text {
+  margin-left: 4px;
+  font-size: 10px;
+  line-height: 150%;
+  color: #ff705d;
+}
+
 .email-input {
   width: 279px;
   height: 42px;
@@ -225,6 +238,18 @@
   }
   @include desktop {
     margin: 12px 0;
+  }
+
+  &:not(:placeholder-shown):not(:focus):valid {
+    border-color: $green;
+  }
+
+  &:not(:placeholder-shown):not(:focus):invalid {
+    border-color: #ff705d;
+  }
+
+  &:not(:placeholder-shown):not(:focus):invalid + .email-error {
+    display: flex;
   }
 }
 
