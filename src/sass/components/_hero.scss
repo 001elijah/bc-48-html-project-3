@@ -90,7 +90,7 @@
         width: 292px;
         height: 292px;
     }
-        @include desktop {
+        @media screen and (min-width:480px){
         top: 26px;
         right: 40px;  
         & img{
@@ -134,7 +134,7 @@
     &:active{
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
     }
-    @media screen and(min-width:1200px){
+    @include desktop{
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
         border-radius: 8px;
         width: 48px;
@@ -166,7 +166,7 @@
 .hero-img__svg{
     width: 11.49px;
     height: 20.34px;
-    @media screen and(min-width:1200px){
+    @media screen and(min-width:1280px){
         width: 16.42px;
         height: 29.05px;
     }
@@ -190,6 +190,6 @@
         bottom: 0;
     }
    &:hover{
-    background-color: #FFE450;;
+    background-color: yellow;
 }
 }
