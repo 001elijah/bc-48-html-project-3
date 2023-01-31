@@ -23,4 +23,3 @@ function funcMenu() {
   };
   
   export {funcMenu};
-  
