@@ -1,4 +1,4 @@
-function func_Slider() {
+ {
   var slideIndex = 1;
 
 showSlides(slideIndex); 
@@ -6,6 +6,7 @@ showSlides(slideIndex);
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
+
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
@@ -23,4 +24,4 @@ function showSlides(n) {
 }
 }
 
-export {func_Slider}
+// export {funcSlider}

@@ -55,14 +55,11 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 30px;
 
-    @mixin tablet {
+    @include tablet {
+        
         width: 458px;
         height: 449px;
     }
-    @mixin desktop {
-         width: 458px;
-         height: 449px;
-     }
 
     transform: translate(-50%, -50%) scale(1);
     // transition: transform $trans;
@@ -103,14 +100,14 @@
 
     padding: 14px 12px;
 
-    @media screen and (min-width:768px)  {
+    @include tablet  {
         width: 394px;
         height: 48px;
 
         border: 1px solid rgba(18, 18, 18, 0.12);
         box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
         border-radius: 30px;
-    }
+    };
 
     // transition: border-color $trans;
 

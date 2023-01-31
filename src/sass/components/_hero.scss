@@ -2,12 +2,12 @@
     position: relative;
     margin: 60px 20px 50px;
     padding-bottom: 60px;
-    @media screen and(min-width:768px){
+    @include tablet{
         margin: 60px 32px 0;
         padding-bottom: 37px;
         
     }
-    @media screen and(min-width:1280px){
+    @include desktop{
         margin: 16px 14px 0;
         padding-bottom: 75px;
     }
@@ -17,11 +17,11 @@
         max-width: 420px;
     }
 
-    @media screen and(min-width:768px) {
+    @include tablet {
         max-width: 770px;
     }
 
-    @media screen and(min-width:1280px) {
+    @include desktop {
         padding-top: 159px;
         padding-bottom: 75px;
         max-width: 1300px;
@@ -34,13 +34,13 @@
     line-height: 1.178;
     color: $dark;
 
-    @media screen and(min-width:768px) {
+    @include tablet {
         width: 537px;
         font-size: 42px;
         line-height: 1.2;
     }
 
-    @media screen and(min-width:1280px) {
+    @include desktop {
         width: 502px;
         font-size: 48px;
         line-height: 1.2;
@@ -55,7 +55,7 @@
     line-height: 1.5;
     color: $dark;
 
-    @media screen and(min-width:768px) {
+    @include tablet {
         margin-top: 44px;
 
         width: 336px;
@@ -63,7 +63,7 @@
         line-height: 1.5;
     }
 
-    @media screen and(min-width:1280px) {
+    @include desktop {
         margin-top: 28px;
         width: 502px;
         font-size: 16px;
@@ -87,7 +87,7 @@
         width: 292px;
         height: 292px;
     }
-        @media screen and(min-width:1280px) {
+        @include desktop {
         top: 26px;
         right: 40px;  
         & img{
@@ -103,7 +103,7 @@
     & img{
          width: 320px;
          height: 320px;}
-   @media screen and(min-width:1280px) {
+   @include desktop {
         top: 0;
         right: 14px;  
      & img{
@@ -148,14 +148,14 @@
 .hero-img__btn--right{
  right: 0px;
  top:235px;
- @media screen and(min-width:1280px){
+ @include desktop{
     top:264px
  }
 }
 .hero-img__btn--left{
     right: 308px;
     top:235px;
-    @media screen and(min-width:1280px){
+    @include desktop{
         top:264px;
         right: 560px;
      }
@@ -183,7 +183,7 @@
     @media screen and (min-width:768px) {
         bottom: -32px;
     }
-    @media screen and(min-width:1280px){
+    @include desktop{
         bottom: 0;
     }
    &:hover{
