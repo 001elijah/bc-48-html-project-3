@@ -1,24 +1,35 @@
 .footer {
   font-family: 'Roboto', sans-serif;
   @include mobileSmall {
-    background-image: url('../images/footer/bgd-transparent-mobile.png');
+    background-image: url('../images/footer/bgd-transp-mobile-bottom.png'),
+      url('../images/footer/bgd-transp-mobile-left.png'),
+      url('../images/footer/bgd-transp-mobile-right.png');
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    background-position: bottom, left top 132px, top right;
+    background-size: 254px 66px, 110px 116px, 104px 259px;
     @include retina {
-      background-image: url('../images/footer/bgd-transparent-mobile-2x.png');
+      background-image: url('../images/footer/bgd-transp-mobile-bottom-2x.png'),
+        url('../images/footer/bgd-transp-mobile-left-2x.png'),
+        url('../images/footer/bgd-transp-mobile-right-2x.png');
     }
   }
   @include mobile {
-    background-image: url('../images/footer/bgd-transparent-mobile.png');
+    max-width: 480px;
+    margin: 0 auto;
+    background-image: url('../images/footer/bgd-transp-mobile-bottom.png'),
+      url('../images/footer/bgd-transp-mobile-left.png'),
+      url('../images/footer/bgd-transp-mobile-right.png');
     background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: contain;
+    background-position: bottom, left top 132px, top right;
+    background-size: 254px 66px, 110px 116px, 104px 259px;
     @include retina {
-      background-image: url('../images/footer/bgd-transparent-mobile-2x.png');
+      background-image: url('../images/footer/bgd-transp-mobile-bottom-2x.png'),
+        url('../images/footer/bgd-transp-mobile-left-2x.png'),
+        url('../images/footer/bgd-transp-mobile-right-2x.png');
     }
   }
   @include tablet {
+    width: auto;
     background-image: url('../images/footer/bgd-transparent-tablet.png');
     background-position: bottom;
     background-size: 768px 506px;
