@@ -1,5 +1,7 @@
 .header {
+  background-color: $white;
   padding: 10px 0;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
 }
 
 .header-box {
@@ -41,6 +43,7 @@
   position: absolute;
   right: 20px;
   overflow: auto;
+  z-index: 5;
 }
 
 .mob-close {
@@ -112,5 +115,5 @@
   font-size: 13px;
   line-height: 150%;
   color: $dark;
+  transition: background 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
