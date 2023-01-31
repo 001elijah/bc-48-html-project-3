@@ -1,5 +1,4 @@
-
-(() => {
+function funcMenu() {
   const refs = {
     openMenuBtn: document.querySelector('[data-menu-open]'),
     closeMenuBtn: document.querySelector('[data-menu-close]'),
@@ -21,4 +20,6 @@
     refs.menu.classList.add('is-hidden');
     refs.body.classList.remove('no-scroll');
   }
-})();
+}
+
+export {funcMenu}
