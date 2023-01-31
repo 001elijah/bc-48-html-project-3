@@ -1,0 +1,110 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-wrap">
+      <div class="hero__meta">
+        <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
+        <p class="hero__text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+        </p>
+      </div>
+      <div class="hero-img__block">
+        <picture class="hero-img__ell">
+          <source
+            srcset="
+              ./images/hero/ellipse-desk-1x.png 1x,
+              ./images/hero/ellipse-desk-2x.png 2x
+            "
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/hero/ellipse-tablet-1x.png 1x,
+              ./images/hero/ellipse-tablet-2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <img src="./images/hero/ellipse-desk-1x.png" alt="" />
+        </picture>
+        <div class="hero-img__item">
+          <picture class="hero-img__img">
+            <source
+              srcset="
+                ./images/hero/hero-slider-01-desk-1x.png 1x,
+                ./images/hero/hero-slider-01-desk-2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                ./images/hero/hero-slider-01-tablet-1x.png 1x,
+                ./images/hero/hero-slider-01-tablet-2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img src="./images/hero/hero-slider-01-tablet-1x.png" alt="" />
+          </picture>
+        </div>
+        <div class="hero-img__item">
+          <picture class="hero-img__img">
+            <source
+              srcset="
+                ./images/hero/hero-slider-02-desk-1x.png 1x,
+                ./images/hero/hero-slider-02-desk-2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                ./images/hero/hero-slider-02-tablet-1x.png 1x,
+                ./images/hero/hero-slider-02-tablet-2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img src="./images/hero/hero-slider-02-tablet-1x.png" alt="" />
+          </picture>
+        </div>
+        <div class="hero-img__item">
+          <picture class="hero-img__img">
+            <source
+              srcset="
+                ./images/hero/hero-slider-03-desk-1x.png 1x,
+                ./images/hero/hero-slider-03-desk-2x.png 2x
+              "
+              media="(min-width: 1200px)"
+            />
+            <source
+              srcset="
+                ./images/hero/hero-slider-03-tablet-1x.png 1x,
+                ./images/hero/hero-slider-03-tablet-2x.png 2x
+              "
+              media="(min-width: 768px)"
+            />
+            <img src="./images/hero/hero-slider-03-tablet-1x.png" alt="" />
+          </picture>
+        </div>
+        <button
+          type="button"
+          class="hero-img__btn hero-img__btn--right"
+          onclick="plusSlides(+1)"
+        >
+          <svg class="hero-img__svg">
+            <use href="./images/icons.svg#icon-right"></use>
+          </svg>
+        </button>
+        <button
+          type="button"
+          class="hero-img__btn hero-img__btn--left"
+          onclick="plusSlides(-1)"
+        >
+          <svg class="hero-img__svg">
+            <use href="./images/icons.svg#icon-left"></use>
+          </svg>
+        </button>
+      </div>
+      <button class="oder_btn data-modal-open" type="button">Order Now</button>
+    </div>
+  </div>
+</section>
+<script src="./js/slider.js"></script>
