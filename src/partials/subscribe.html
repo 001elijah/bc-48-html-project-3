@@ -1,12 +1,12 @@
 <section class="subscribe">
-  <div class="container">
+  <div class="container subscribe-wrap">
     <picture>
       <source
         srcset="
           ./images/subscribe/banan-desk-1x.png 1x,
           ./images/subscribe/banan-desk-2x.png 2x
         "
-        media="(min-width: 1200px)"
+        media="(min-width: 1280px)"
       />
       <source
         srcset="
@@ -23,26 +23,27 @@
         media="(max-width: 767px)"
       />
       <img
+        class="subscribe-img"
         src="./images/subscribe/banan-desk-1x.png"
         alt="banana"
-        width="608"
-        height="266"
       />
     </picture>
-    <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
-    <p class="subscribe-text">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      varius enim in eros elementum tristique.
-    </p>
-    <form class="subscribe-form">
-      <input
-        type="text"
-        class="subscribe-input"
-        name="user-email"
-        placeholder="Enter your email"
-        required
-      />
-      <button type="submit" class="subscribe-button">Subscribe</button>
-    </form>
+    <div class="subscribe-desk-wrap">
+      <h2 class="subscribe-title">Subscribe To Get Special Offers</h2>
+      <p class="subscribe-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique.
+      </p>
+      <form class="subscribe-form">
+        <input
+          type="text"
+          class="subscribe-input"
+          name="user-email"
+          placeholder="Enter your email"
+          required
+        />
+        <button type="submit" class="subscribe-button">Subscribe</button>
+      </form>
+    </div>
   </div>
 </section>
