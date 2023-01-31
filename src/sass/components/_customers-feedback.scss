@@ -162,6 +162,13 @@
    width: 160px;
    border-right: 1px solid $green;
    margin-top: 40px;
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.feedback-customer:hover, 
+.feedback-customer:focus{
+    transform: scale(1.15);
+    cursor: pointer;
 }
 
 .feedback-customer-data{
