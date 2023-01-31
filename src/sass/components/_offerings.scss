@@ -5,6 +5,8 @@
 
   padding-top: 41px;
   padding-bottom: 60px;
+  margin: 0 auto;
+  width:100%;
 
   @include tablet {
     background-image: url(/src/images/offerings/bgd-template-top-tablet.png);
@@ -190,11 +192,7 @@
       position: absolute;
       left: 79px;
       bottom: 38px;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        #2f583f 0%,
-        rgba(105, 105, 105, 0) 100%
-      );
+      background: $radial-gr;
       filter: blur(6.61818px);
       width: 128px;
       height: 44px;
