@@ -36,10 +36,6 @@
     }
 }
 
-.modal__svg {
-    // transition: fill $trans;
-}
-
 .modal {
     position: absolute;
     z-index: 99;
@@ -49,14 +45,14 @@
     height: 449px;
     width: 320px;
 
-    padding: 32px 20px ;
+    padding: 32px 20px;
     background: $yellow;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
     border-radius: 30px;
 
     @include tablet {
-        
+
         width: 458px;
         height: 449px;
     }
@@ -83,12 +79,14 @@
     flex-direction: column;
     margin-bottom: 24px;
 
-    &:last-child{
+    &:last-child {
         margin-bottom: 32px;
     }
 
 }
+
 .modal-form__input {
+    position: relative;
     width: 280px;
     height: 48px;
 
@@ -99,29 +97,43 @@
     border-radius: 30px;
 
     padding: 14px 12px;
+    outline: none;
 
-    @include tablet  {
+    @include tablet {
         width: 394px;
         height: 48px;
 
         border: 1px solid rgba(18, 18, 18, 0.12);
         box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
         border-radius: 30px;
-    };
-
-    // transition: border-color $trans;
-
-    // &:focus-within,
-    // &:not(:placeholder-shown) {
-    //     border-color: $hover-color;
-    // }
-
-    &::placeholder{
-        font-weight: 400;
-    font-size: 16px;
-    line-height: 1.25;
-    color: #C4C4C4;
     }
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.25;
+        color: #C4C4C4;
+        background: #FFFFFF;
+
+    }
+
+    &:not(:placeholder-shown):invalid {
+        border: 1px solid #FF705D;
+    }
+
+    &:not(:placeholder-shown):valid {
+        border: 1px solid #7EB101;
+    }
+}
+
+.modal-form:valid .modal-form__button {
+    background: #BBF330;
+    border: 2px solid #7EB101;
+}
+
+.modal-form:invalid .modal-form__button {
+    background: #FFFFFF;
+    border: 2px solid #FF705D;
 }
 
 .modal-form__title {
@@ -136,20 +148,10 @@
     text-align: left;
 }
 
-.modal-form__label--check {
-    display: block;
-    position: relative;
-    margin-bottom: 30px;
-
-}
-
 .modal-form__button {
     display: flex;
     align-items: center;
     text-align: center;
-
-    width: 106px;
-    height: 40px;
 
     background: #FFFFFF;
 
@@ -174,4 +176,23 @@
         cursor: pointer;
         // background-color: $mainback2-color;
     }
+
+    &:invalid {
+        background: #FFFFFF;
+        border: 2px solid #FF705D;
+        border-radius: 30px;
+    }
 }
+
+.modal-form__name--error,
+ .modal-form__tel--error,
+ .modal-form__email--error{
+    display: block;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #FF705D;
+    margin-left: 28px;
+}
+
+
