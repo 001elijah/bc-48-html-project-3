@@ -1,1 +1,0 @@
-{"mappings":"gfAAA,IAAAA,EAAAC,EAAA,S,cAGA,EAAAD,EAAAE,cACA,EAAAC,EAAAC,a","sources":["src/js/index.js"],"sourcesContent":["import {funcModal} from \"./modal\";\nimport {funcSlider} from \"./slider\";\n\nfuncModal();\nfuncSlider();"],"names":["$5xtVg","parcelRequire","funcModal","$8Veln","funcSlider"],"version":3,"file":"index.024d6b4d.js.map"}
