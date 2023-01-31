@@ -1,4 +1,5 @@
 .footer {
+  font-family: 'Roboto', sans-serif;
   @include mobileSmall {
     background-image: url('../images/footer/bgd-transparent-mobile.png');
     background-repeat: no-repeat;
@@ -130,12 +131,16 @@
 
 .address-link {
   text-decoration: none;
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: $dark;
+  transition: color, text-decoration-line, 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    text-decoration-line: underline;
+    color: $fresh-green;
+  }
 }
 
 // Subscribe form
@@ -156,8 +161,6 @@
 }
 
 .mailing-title {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
@@ -215,9 +218,6 @@
 }
 
 .email-input::placeholder {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   font-size: 12px;
   line-height: 150%;
   color: #505050;
@@ -227,8 +227,6 @@
   margin: 20px 0;
   margin-left: auto;
   min-width: 103px;
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 150%;
@@ -238,8 +236,6 @@
     margin: 20px 0;
     margin-left: auto;
     min-width: 103px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 150%;
@@ -255,16 +251,10 @@
 }
 
 .email-text {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   font-size: 10px;
   line-height: 12px;
   color: $dark;
   @include mobile {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     color: $dark;
@@ -280,17 +270,13 @@
 }
 
 .email-link {
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
   font-size: 10px;
   line-height: 12px;
   text-decoration-line: underline;
   color: $green;
   @include mobile {
-    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     text-decoration-line: underline;
@@ -353,17 +339,13 @@
 }
 
 .privacy-link {
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
   font-size: 10px;
   line-height: 12px;
   text-decoration-line: underline;
   color: $green;
   @include mobile {
-    font-family: 'Roboto';
     font-style: normal;
-    font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     text-decoration-line: underline;
@@ -381,17 +363,11 @@
 
 .privacy-text {
   margin: 40px auto 0 auto;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   font-size: 10px;
   line-height: 12px;
   color: $dark;
   @include mobile {
     margin: 40px auto 0 auto;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 10px;
     line-height: 12px;
     color: $dark;
