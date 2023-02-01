@@ -7,6 +7,9 @@
   padding-bottom: 60px;
   margin: 0 auto;
   width: 480px;
+  @include mobileSmall {
+    width: 100%;
+  }
 
   @include tablet {
     background-image: url(/src/images/offerings/bgd-template-top-tablet.png);
