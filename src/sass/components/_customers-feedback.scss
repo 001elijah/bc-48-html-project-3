@@ -18,22 +18,23 @@
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-480.png");
         
         // height: 769px; //temporary during develpoment!!!
-        width: 480px; //temporary during develpoment!!!
+        // width: 480px; //temporary during develpoment!!!
     }
 
     @include tablet{
        
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-tablet.png");
-        
+        width:100vw;
         // height: 544px; //temporary during develpoment!!!
-        width: 768px; //temporary during develpoment!!!
+        // width: 768px; //temporary during develpoment!!!
 
     }
     @include desktop {
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-desk.png");
        
+        max-width: 1900px;
         // height: 647px; //temporary during develpoment!!!
-        width: 1280px; //temporary during develpoment!!!
+        // width: 1280px; //temporary during develpoment!!!
    }
 }
 
