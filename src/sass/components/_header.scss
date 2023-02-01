@@ -6,7 +6,6 @@
     position: fixed;
     width: 100vw;
     top: 0;
-    left: 0;
     z-index: 999;
   }
 }
@@ -41,7 +40,22 @@
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  // &:hover {
+  //   animation-name: open1;
+  //   animation-duration: 2s;
+  //   animation-timing-function: linear;
+  // }
 }
+
+// @keyframes open1 {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+
+//   100% {
+//     transform: rotate(180deg);
+//   }
+// }
 
 .mob-menu {
   background-color: $white;
