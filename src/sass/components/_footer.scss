@@ -34,14 +34,27 @@
   }
   @include tablet {
     width: auto;
-    background-image: url('../images/footer/bgd-transparent-tablet.png');
-    background-position: bottom;
-    background-size: 768px 506px;
+    margin: 0 auto;
+    background-image: url('../images/footer/bgd-transp-tablet-bottom.png'),
+      url('../images/footer/bgd-transp-tablet-right.png');
     background-repeat: no-repeat;
+    background-position: bottom, top right;
+    background-size: 802px 506px, 203px 365px;
     @include retina {
-      background-image: url('../images/footer/bgd-transparent-tablet-2x.png');
+      background-image: url('../images/footer/bgd-transp-tablet-bottom-2x.png'),
+        url('../images/footer/bgd-transp-tablet-right-2x.png');
     }
   }
+  // @include tablet {
+  //   width: auto;
+  //   background-image: url('../images/footer/bgd-transparent-tablet.png');
+  //   background-position: bottom;
+  //   background-size: 768px 506px;
+  //   background-repeat: no-repeat;
+  //   @include retina {
+  //     background-image: url('../images/footer/bgd-transparent-tablet-2x.png');
+  //   }
+  // }
   @include desktop {
     background-image: url('../images/footer/bgd-transparent-desk.png');
     background-position: bottom;
