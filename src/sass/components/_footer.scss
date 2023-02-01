@@ -206,6 +206,8 @@
 }
 
 .email-error {
+  position: absolute;
+  bottom: -14px;
   display: none;
   margin-top: 4px;
   align-items: center;
@@ -219,6 +221,7 @@
 }
 
 .input-box {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-top: 12px;
