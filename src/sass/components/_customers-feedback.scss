@@ -10,14 +10,14 @@
         // max-width: 479px;
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-mobile.png");
         
-        height: 769px; //temporary during develpoment!!!
-        width: 320px; //temporary during develpoment!!!
+        // height: 769px; //temporary during develpoment!!!
+        // width: 320px; //temporary during develpoment!!!
     }
 
     @include mobile{
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-480.png");
         
-        height: 769px; //temporary during develpoment!!!
+        // height: 769px; //temporary during develpoment!!!
         width: 480px; //temporary during develpoment!!!
     }
 
@@ -44,7 +44,8 @@
     }
     @include mobile {
         padding-top: 60px;
-        padding-bottom: 60px;
+        // padding-bottom: 60px;
+        padding-bottom: 131px;
     }
 
     @include tablet {

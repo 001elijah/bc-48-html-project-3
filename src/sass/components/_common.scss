@@ -29,7 +29,7 @@
     overflow: hidden;
 }
 .button--small {
-    width: 98px;
+    min-width: 98px;
     height: 32px;
 
     background: $fresh-green;
@@ -44,7 +44,7 @@
     }
 }
 .button--large {
-    width: 106px;
+    min-width: 106px;
     height: 40px;
     
     background: $white;
@@ -62,7 +62,7 @@
     }
 }
 .button-subscribe--solid {
-    width: 103px;
+    min-width: 103px;
     height: 42px;
 
     background: $fresh-green;
@@ -76,7 +76,7 @@
     }
 }
 .button-subscribe--bordered {
-    width: 103px;
+    min-width: 103px;
     height: 42px;
     
     background: $white;
