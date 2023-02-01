@@ -2,7 +2,8 @@
 
     background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        // background-size: cover;
+        background-size: 100% 100%;
         margin: 0 auto;
 
     @include mobileSmall{
@@ -10,8 +11,6 @@
         // max-width: 479px;
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-mobile.png");
         
-        background-size: 100% 100%;
-        // background-size: 100% 100%;
         // height: 769px; //temporary during develpoment!!!
         // width: 320px; //temporary during develpoment!!!
     }
@@ -19,9 +18,6 @@
     @include mobile{
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-480.png");
         
-        background-size: 100% 100%;
-        // background-size: 100% 100%;
-
         // height: 769px; //temporary during develpoment!!!
         // width: 480px; //temporary during develpoment!!!
     }
@@ -30,6 +26,7 @@
        
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-tablet.png");
         width:100vw;
+
         // height: 544px; //temporary during develpoment!!!
         // width: 768px; //temporary during develpoment!!!
 
@@ -38,6 +35,7 @@
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-desk.png");
        
         max-width: 1900px;
+
         // height: 647px; //temporary during develpoment!!!
         // width: 1280px; //temporary during develpoment!!!
    }
