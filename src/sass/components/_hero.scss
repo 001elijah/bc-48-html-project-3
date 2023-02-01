@@ -1,7 +1,13 @@
+.hero{
+    @media screen and(max-width:767px) {
+        padding-top: 60px;
+        padding-bottom: 50px;
+    }
+}
+
 .hero-wrap {
     position: relative;
-    margin-top: 60px;
-    margin-bottom: 50px;
+
     padding-bottom: 60px;
 
     @include tablet {
