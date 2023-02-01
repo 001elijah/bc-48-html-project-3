@@ -17,7 +17,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   @include tablet {
     display: flex;
@@ -88,7 +88,6 @@
     flex-wrap: nowrap;
     align-items: flex-start;
     gap: 22px;
-    margin-bottom: 100px;
   }
   @include desktop {
     display: flex;
@@ -152,6 +151,7 @@
   height: 42px;
   color: #2c2c2c;
   border: none;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   font-style: normal;
   font-weight: 500;
