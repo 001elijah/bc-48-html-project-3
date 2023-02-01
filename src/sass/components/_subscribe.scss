@@ -29,7 +29,6 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    margin-bottom: 64px;
   }
 }
 
@@ -111,12 +110,17 @@
   font-size: 12px;
   line-height: 1.5;
   color: #505050;
+  outline: transparent;
   @include tablet {
     width: 394px;
   }
   @include desktop {
     width: 394px;
   }
+}
+
+.subscribe-input:hover {
+  border: 1px solid #ffe550;
 }
 
 .subscribe-input:not(:placeholder-shown):not(:focus):valid {
