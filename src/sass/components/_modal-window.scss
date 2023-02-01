@@ -46,7 +46,7 @@
     width: 320px;
     height: 449px;
     padding: 32px 20px;
-    @media screen and(min-width768px){
+    @media screen and(min-width:768px){
         padding: 32px 32px;
     }
 
@@ -155,7 +155,7 @@
         background-image: url('../images/modal-window/icon-warning.svg');
         position: absolute;
         left:-16px;
-        top:1px;
+        top:2px;
     }
 }
 .modal-error__name:not(:placeholder-shown):invalid + .modal-errormes__name,
