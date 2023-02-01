@@ -242,8 +242,19 @@
 .apple-image {
   transform-origin: center center;
   transform: scale(1.15) rotate(5deg);
-  animation-fill-mode: both;
-  animation-play-state: running;
+  animation-name: scalePlusRotate;
+  animation-duration: 3000ms;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes scalePlusRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(5deg);
+  }
 }
   // transparent apples for tablet only
   .apple-transparent {
