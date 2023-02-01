@@ -193,14 +193,14 @@
   }
   @include tablet {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
     flex-direction: row;
   }
   @include desktop {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
   }
 }
@@ -218,11 +218,26 @@
   color: #ff705d;
 }
 
+.input-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+  @include mobile {
+    margin-top: 12px;
+  }
+  @include tablet {
+    margin: 12px 0;
+  }
+  @include desktop {
+    margin: 12px 0;
+  }
+}
+
 .email-input {
   width: 279px;
   height: 42px;
   padding: 12px 12px;
-  margin-top: 12px;
+  
   outline: none;
   background: $white;
   border: 0.854167px solid $yellow;
@@ -231,18 +246,18 @@
     width: 279px;
     height: 42px;
     padding: 12px 12px;
-    margin-top: 12px;
+    
     outline: none;
     background: $white;
     border: 0.854167px solid $yellow;
     border-radius: 30px;
   }
-  @include tablet {
-    margin: 12px 0;
-  }
-  @include desktop {
-    margin: 12px 0;
-  }
+  // @include tablet {
+  //   margin: 12px 0;
+  // }
+  // @include desktop {
+  //   margin: 12px 0;
+  // }
 
   &:not(:placeholder-shown):not(:focus):valid {
     border-color: $green;
