@@ -5,17 +5,23 @@
 
   padding-top: 41px;
   padding-bottom: 60px;
+  margin: 0 auto;
+  width: 480px;
 
   @include tablet {
     background-image: url(/src/images/offerings/bgd-template-top-tablet.png);
     padding-top: 150px;
     padding-bottom: 100px;
+    margin: 0 auto;
+    width: 768px;
   }
 
   @include desktop {
     background-image: url(/src/images/offerings/bgd-template-top-desk.png);
     padding-top: 177px;
     padding-bottom: 43px;
+    margin: 0 auto;
+    width: 1280px;
   }
 
   .container {
@@ -106,7 +112,7 @@
     display: block;
     background-size: 32px 32px;
     background-position: 50% 50%;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: $ellipse-color;
     background-repeat: no-repeat;
     margin-bottom: 8px;
   }
@@ -190,11 +196,7 @@
       position: absolute;
       left: 79px;
       bottom: 38px;
-      background: radial-gradient(
-        50% 50% at 50% 50%,
-        #2f583f 0%,
-        rgba(105, 105, 105, 0) 100%
-      );
+      background: $radial-gr;
       filter: blur(6.61818px);
       width: 128px;
       height: 44px;
@@ -219,7 +221,7 @@
       z-index: 1;
       width: 100%;
       height: 280px;
-      border: 3px solid rgba(255, 255, 255, 0.5);
+      border: 3px solid $ellipse-border;
       border-radius: 50%;
 
       @include tablet {
