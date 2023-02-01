@@ -6,7 +6,10 @@
   padding-top: 41px;
   padding-bottom: 60px;
   margin: 0 auto;
-  width: 480px;
+  // width: 480px;
+  @include mobileSmall {
+    width: 100%;
+  }
 
   @include tablet {
     background-image: url(/src/images/offerings/bgd-template-top-tablet.png);
@@ -21,7 +24,7 @@
     padding-top: 177px;
     padding-bottom: 43px;
     margin: 0 auto;
-    width: 1280px;
+    max-width: 1900px;
   }
 
   .container {
