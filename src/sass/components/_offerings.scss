@@ -160,6 +160,7 @@
       position: absolute;
       z-index: 2;
       left: 42px;
+      transition: $trans;
 
       @include tablet {
         left: 54px;
@@ -237,7 +238,12 @@
       }
     }
   }
-
+// animation
+.apple-image:hover {
+  transform-origin: center center;
+  transform: scale(1.15) rotate(5deg);
+  animation: animate125 3000ms infinite 1000ms;
+}
   // transparent apples for tablet only
   .apple-transparent {
     display: none;
