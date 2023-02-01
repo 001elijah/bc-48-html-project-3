@@ -64,7 +64,6 @@
         width: 458px;
         height: 449px;
     }
-
     transform: translate(-50%, -50%) scale(1);
     transition: transform $trans;
 
@@ -86,7 +85,6 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 24px;
-
 }
 
 
@@ -122,7 +120,7 @@
         background: $white;
 
     }
-
+/*перевірка валідності*/
     &:not(:placeholder-shown):invalid {
         border: 1px solid $btn;
     }
@@ -131,6 +129,7 @@
         border: 1px solid $green;
     }
 }
+
 .modal-errormes__email,
 .modal-errormes__tel,
 .modal-errormes__name,
@@ -158,6 +157,7 @@
         top:2px;
     }
 }
+
 .modal-error__name:not(:placeholder-shown):invalid + .modal-errormes__name,
 .modal-error__tel:not(:placeholder-shown):invalid + .modal-errormes__tel,
 .modal-error__email:not(:placeholder-shown):invalid + .modal-errormes__email{
@@ -177,6 +177,7 @@
 }
 
 .modal-form__button {
+    position: relative;
     display: flex;
     align-items: center;
     text-align: center;
@@ -202,22 +203,44 @@
     &:focus {
         cursor: pointer;
     }
-
-    &:invalid {
+/* перевірка валідності форми вцілому*/
+    .modal-form:valid & {
+        background-color: $fresh-green;
+        border: 2px solid $green;
+    }
+    .modal-form:invalid &:active,
+    .modal-form:invalid &:hover {
+        background-color: $white;
         border: 2px solid $btn;
     }
+    .modal-form:invalid &:active + .error-msg,
+    .modal-form:invalid &:hover + .error-msg{
+        display: block;
 }
-
-.modal-form:valid .modal-form__button {
-    background-color: $fresh-green;
-    border: 2px solid $green;
+    .modal-form:invalid &:active .modal-error__mes,
+    .modal-form:invalid &:active .modal-error__mes{
+        display: block;
+    }
 }
-
-.modal-form:invalid .modal-form__button:active,
-.modal-form:invalid .modal-form__button:hover {
-    background-color: $white;
-    border: 2px solid $btn;
-    & .modal-error__mes{
-   display: block;
+.error-msg{
+    position: absolute;
+    bottom: 79px;
+    left: 77px;
+    @media screen and(min-width:768px) {
+        left: 146px;
+    }
+    display: none;
 }
+.error-msg__svg{
+    position: relative;
+}
+.error-msg__text{
+    position: absolute;
+    top:16px;
+    left: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FAEDEB;
 }
