@@ -35,17 +35,21 @@
         varius enim in eros elementum tristique.
       </p>
       <form class="subscribe-form">
-        <input
-          type="email"
-          class="subscribe-input"
-          name="user-email"
-          placeholder="Enter your email"
-          required
-        />
-        <p class="subscribe-invalid">
-          Not a valid email address (example@email.com)
-        </p>
-        <button type="submit" class="subscribe-button">Subscribe</button>
+        <div class="invalid-wrap">
+          <input
+            type="email"
+            class="subscribe-input"
+            name="user-email"
+            placeholder="Enter your email"
+            required
+          />
+          <p class="subscribe-invalid">
+            Not a valid email address (example@email.com)
+          </p>
+        </div>
+        <button type="submit" class="button--small subscribe-button">
+          Subscribe
+        </button>
       </form>
     </div>
   </div>
