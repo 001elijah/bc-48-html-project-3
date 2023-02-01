@@ -205,6 +205,12 @@
       width: 128px;
       height: 44px;
       z-index: 1;
+
+      animation-name: scaleShadow;
+      animation-duration: 3000ms;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
       @include tablet {
         left: 100px;
         bottom: 48px;
@@ -236,6 +242,14 @@
         height: 550px;
         border-width: 5px;
       }
+    }
+  }
+  @keyframes scaleShadow {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.5);
     }
   }
 // animation
