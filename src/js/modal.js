@@ -4,7 +4,7 @@ function funcModal() {
     closeModalBtn: document.querySelector("[data-modal-close]"),
     modal: document.querySelector("[data-modal]"),
   }
-for (button of refs.openModalBtn){
+for (let button of refs.openModalBtn){
   button.addEventListener("click", toggleModal)};
   refs.closeModalBtn.addEventListener("click", toggleModal);
 
