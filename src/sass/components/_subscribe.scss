@@ -29,7 +29,6 @@
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    margin-bottom: 64px;
   }
 }
 
@@ -87,30 +86,31 @@
   @include tablet {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 22px;
     margin-bottom: 100px;
   }
   @include desktop {
     display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 32px;
   }
 }
 
 .subscribe-input {
   padding-left: 11px;
-  width: 100%;
+  width: 278px;
   height: 42px;
   background: #ffffff;
-  border: 0.854167px solid #ffe550;
+  border: 1px solid #ffe550;
   border-radius: 30px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
   color: #505050;
+  outline: transparent;
   @include tablet {
     width: 394px;
   }
@@ -119,20 +119,44 @@
   }
 }
 
+.subscribe-input:hover {
+  border: 1px solid #ffe550;
+}
+
+.subscribe-input:not(:placeholder-shown):not(:focus):valid {
+  border: 1px solid #7eb101;
+  border-radius: 30px;
+}
+
+.subscribe-input:not(:placeholder-shown):not(:focus):invalid {
+  border: 1px solid #ff705d;
+  border-radius: 30px;
+}
+
+.subscribe-input:not(:placeholder-shown):not(:focus):invalid
+  + .subscribe-invalid {
+  display: block;
+}
+
+.subscribe-invalid {
+  display: none;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.5;
+  color: #ff705d;
+}
+
 .subscribe-button {
   margin-left: auto;
   min-width: 103px;
   height: 42px;
   color: #2c2c2c;
-  background: #bbf330;
-  border-radius: 30px;
   border: none;
   cursor: pointer;
   font-style: normal;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
-  color: #2c2c2c;
   @include tablet {
     display: flex;
     align-items: center;
