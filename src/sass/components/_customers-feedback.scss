@@ -6,42 +6,47 @@
         margin: 0 auto;
 
     @include mobileSmall{
-        min-width: 320px;
-        max-width: 479px;
+        // min-width: 320px;
+        // max-width: 479px;
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-mobile.png");
         
-        height: 769px; //temporary during develpoment!!!
-        width: 320px; //temporary during develpoment!!!
+        // height: 769px; //temporary during develpoment!!!
+        // width: 320px; //temporary during develpoment!!!
     }
 
     @include mobile{
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-480.png");
         
-        height: 769px; //temporary during develpoment!!!
-        width: 480px; //temporary during develpoment!!!
+        // height: 769px; //temporary during develpoment!!!
+        // width: 480px; //temporary during develpoment!!!
     }
 
     @include tablet{
        
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-tablet.png");
-        
-        height: 544px; //temporary during develpoment!!!
-        width: 768px; //temporary during develpoment!!!
+        width:100vw;
+        // height: 544px; //temporary during develpoment!!!
+        // width: 768px; //temporary during develpoment!!!
 
     }
     @include desktop {
-        max-width: 1600px;
         background-image: url("/src/images/customers-feedback/bgd-template-bottom-desk.png");
        
-        height: 647px; //temporary during develpoment!!!
-        width: 1280px; //temporary during develpoment!!!
+        max-width: 1900px;
+        // height: 647px; //temporary during develpoment!!!
+        // width: 1280px; //temporary during develpoment!!!
    }
 }
 
 .feedback-wrapper{
-    @include mobile {
+    @include mobileSmall {
         padding-top: 60px;
         padding-bottom: 60px;
+    }
+    @include mobile {
+        padding-top: 60px;
+        // padding-bottom: 60px;
+        padding-bottom: 131px;
     }
 
     @include tablet {
@@ -57,6 +62,9 @@
 
 .feedback-title{
     line-height: 1.17;
+    @include mobileSmall {
+        font-size: 28px;
+        }
     @include mobile {
         font-size: 28px;
         }
@@ -64,6 +72,9 @@
     @include tablet{
         font-size: 42px;
         }
+    @include desktop{
+        font-size: 42px;
+            }
 }
 
 .feedback-text{
@@ -71,6 +82,9 @@
     line-height: 1.17;
     margin-top: 20px;
     margin-bottom: 32px;
+    @include mobileSmall{
+        font-size: 14px;
+        }
     @include mobile{
         font-size: 14px;
         }
@@ -78,6 +92,10 @@
     @include tablet{
     font-size: 16px;
     }
+    @include desktop{
+        font-size: 16px;
+
+        }
 }
 
 .feedback-list{
@@ -151,6 +169,14 @@
     }
 
     @include mobile{
+        font-size: 18px;
+    }
+
+    @include tablet{
+        font-size: 18px;
+    }
+
+    @include desktop{
         font-size: 18px;
     }
 

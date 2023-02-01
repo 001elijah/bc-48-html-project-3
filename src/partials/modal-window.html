@@ -10,21 +10,21 @@
         <div class="modal-form__input-block">
           <label class="modal-form__label">
             <span class="modal-form__title">Name</span>
-            <!-- <span class="modal-form__name--error">The name must be between 3 and 25 characters</span>             -->
             <input
-              class="modal-form__input"
+              class="modal-form__input modal-error__name"
               type="text"
               name="name"
               placeholder="Your name"
               required
               minlength="3"  maxlength="25"
             />
+            <span class="modal-errormes__name">The name must be between 3 and 25 characters</span>
+            <span class="modal-error__mes">This field is required</span>
              </label>
           <label class="modal-form__label">
             <span class="modal-form__title">Phone number</span>
-            <!-- <span class="modal-form__tel--error">The name must be between 3 and 25 characters</span> -->
             <input
-              class="modal-form__input "
+              class="modal-form__input modal-error__tel"
               type="tel"
               name="tel"
               placeholder="0_ _  _ _ _   _ _   _ _"
@@ -32,17 +32,20 @@
               pattern="\d{3}\s\d{3}\s\d{2}\s\d{2}"
               minlength="13" maxlength="13"
             />
-          </label>
+            <span class="modal-errormes__tel"> This phone must be in the format  099 000 00 00</span>
+            <span class="modal-error__mes">This field is required</span>
+            </label>
           <label class="modal-form__label">
             <span class="modal-form__title">E-mail</span>
-            <!-- <span class="modal-form__email--error">The name must be between 3 and 25 characters</span> -->
             <input
-              class="modal-form__input"
+              class="modal-form__input modal-error__email"
               type="email"
               name="email"
               placeholder="example@gmail.com"
               required
             />
+            <span class="modal-errormes__email">Please enter a valid email address</span>
+            <span class="modal-error__mes">This field is required</span>
         </label>
         <button class="modal-form__button" type="submit">
           Send

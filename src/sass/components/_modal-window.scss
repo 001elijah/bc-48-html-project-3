@@ -5,9 +5,9 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(94, 99, 99, 0.7);
+    background: $backdrop;
     opacity: 1;
-    // transition: opacity var(--trans);
+    transition: opacity $trans
 }
 
 .backdrop.is-hidden {
@@ -26,8 +26,9 @@
     height: 30px;
     border: none;
     border-radius: 50%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    background: $white;
+    box-shadow: $shadow;
+    transition: fill $trans;
 
     &:hover,
     &:focus {
@@ -42,23 +43,27 @@
     top: 50%;
     left: 50%;
     width: 100%;
-    height: 449px;
     width: 320px;
+    height: 449px;
 
-    padding: 32px 20px;
+    padding: 32px 32px;
     background: $yellow;
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    box-shadow: $shadow;
     border-radius: 30px;
 
     @include tablet {
+        width: 458px;
+        height: 449px;
+    }
 
+    @include desktop {
         width: 458px;
         height: 449px;
     }
 
     transform: translate(-50%, -50%) scale(1);
-    // transition: transform $trans;
+    transition: transform $trans;
 
     .backdrop.is-hidden & {
         scale: 0;
@@ -90,21 +95,22 @@
     width: 280px;
     height: 48px;
 
-    background: #FFFFFF;
+    background: $white;
 
-    border: 1px solid $green;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid $yellow;
+    box-shadow: inset  $shadow1;
     border-radius: 30px;
 
     padding: 14px 12px;
     outline: none;
+    transition: border $trans;
 
-    @include tablet {
+    @media screen and(min-width:480px) {
         width: 394px;
         height: 48px;
 
-        border: 1px solid rgba(18, 18, 18, 0.12);
-        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+        border: 1px solid $border;
+        box-shadow: inset $shadow1;
         border-radius: 30px;
     }
 
@@ -112,28 +118,49 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 1.25;
-        color: #C4C4C4;
-        background: #FFFFFF;
+        color: $placeholder;
+        background: $white;
 
     }
 
     &:not(:placeholder-shown):invalid {
-        border: 1px solid #FF705D;
+        border: 1px solid $btn;
     }
 
     &:not(:placeholder-shown):valid {
-        border: 1px solid #7EB101;
+        border: 1px solid $green;
     }
 }
+.modal-errormes__email,
+.modal-errormes__tel,
+.modal-errormes__name,
+.modal-error__mes{
+    position: absolute;
+    bottom: -17px;
+    left:28px;
 
-.modal-form:valid .modal-form__button {
-    background: #BBF330;
-    border: 2px solid #7EB101;
+    display: none;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #FF705D;
+    @media screen and (min-width:768px) {
+        font-size: 13px;
+    }
+
+    &::before{
+        content: '';
+        width: 12px;
+        height: 12px;
+        background-image: url('../images/modal-window/icon-warning.svg');
+        position: absolute;
+        left:-16px;
+    }
 }
-
-.modal-form:invalid .modal-form__button {
-    background: #FFFFFF;
-    border: 2px solid #FF705D;
+.modal-error__name:not(:placeholder-shown):invalid + .modal-errormes__name,
+.modal-error__tel:not(:placeholder-shown):invalid + .modal-errormes__tel,
+.modal-error__email:not(:placeholder-shown):invalid + .modal-errormes__email{
+    display: block;
 }
 
 .modal-form__title {
@@ -153,8 +180,6 @@
     align-items: center;
     text-align: center;
 
-    background: #FFFFFF;
-
     border: 2px solid $green;
     border-radius: 30px;
 
@@ -162,37 +187,36 @@
     font-size: 13px;
     line-height: 1.5;
 
-    color: #2C2C2C;
+    background: $white;
+    color: $main-text;
 
     padding: 10px 38px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
 
-    // transition: background-color $trans;
+    transition: border $trans, background-color $trans;
 
     &:hover,
     &:focus {
         cursor: pointer;
-        // background-color: $mainback2-color;
     }
 
     &:invalid {
-        background: #FFFFFF;
-        border: 2px solid #FF705D;
-        border-radius: 30px;
+        border: 2px solid $btn;
     }
 }
 
-.modal-form__name--error,
- .modal-form__tel--error,
- .modal-form__email--error{
-    display: block;
-    font-weight: 500;
-    font-size: 11px;
-    line-height: 1.4;
-    color: #FF705D;
-    margin-left: 28px;
+.modal-form:valid .modal-form__button {
+    background-color: $fresh-green;
+    border: 2px solid $green;
 }
 
-
+.modal-form:invalid .modal-form__button:active,
+.modal-form:invalid .modal-form__button:hover {
+    background-color: $white;
+    border: 2px solid $btn;
+    & .modal-error__mes{
+   display: block;
+}
+}

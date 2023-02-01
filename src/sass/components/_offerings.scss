@@ -1,0 +1,250 @@
+.offerings {
+  background-image: url(/src/images/offerings/bgd-template-top-mobile.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top: 41px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  // width: 480px;
+  @include mobileSmall {
+    width: 100%;
+  }
+
+  @include tablet {
+    background-image: url(/src/images/offerings/bgd-template-top-tablet.png);
+    padding-top: 150px;
+    padding-bottom: 100px;
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  @include desktop {
+    background-image: url(/src/images/offerings/bgd-template-top-desk.png);
+    padding-top: 177px;
+    padding-bottom: 43px;
+    margin: 0 auto;
+    max-width: 1900px;
+  }
+
+  .container {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      gap: 90px;
+    }
+  }
+
+  &-apple-list {
+    display: flex;
+    justify-content: center;
+
+    @include tablet {
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &-title {
+    font-size: 28px;
+    line-height: 1.2;
+    color: $dark;
+    margin-top: 60px;
+    margin-bottom: 28px;
+
+    @media screen and (min-width: 768px) {
+      width: 526px;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    @include desktop {
+      margin-top: 0;
+    }
+  }
+  &-text {
+    font-size: 14px;
+    line-height: 1.14;
+    color: $dark;
+    margin-bottom: 28px;
+
+    @media screen and (min-width: 768px) {
+      width: 500px;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
+    @include tablet {
+      line-height: 1.2;
+    }
+    @include desktop {
+      line-height: 1.5;
+    }
+  }
+  &-list {
+    margin-right: 28px;
+    @include tablet {
+      display: flex;
+      gap: 116px;
+      margin-right: 84px;
+    }
+    @include desktop {
+      display: flex;
+      gap: 67px;
+      margin-right: 35px;
+    }
+  }
+  &-link {
+    font-size: 14px;
+    line-height: 1.5;
+    color: $black;
+    text-decoration: none;
+
+    margin-left: 24px;
+
+    @include desktop {
+      display: none;
+    }
+  }
+
+  .title-before-rocket::before,
+  .title-before-touch::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: block;
+    background-size: 32px 32px;
+    background-position: 50% 50%;
+    background-color: $ellipse-color;
+    background-repeat: no-repeat;
+    margin-bottom: 8px;
+  }
+  .title-before-rocket::before {
+    background-image: url(../images/offerings/icon-rocket.svg);
+  }
+  .title-before-touch::before {
+    background-image: url(../images/offerings/icon-touch.svg);
+  }
+  .offerings-item-title {
+    margin-bottom: 16px;
+  }
+  .offerings-item-text {
+    font-size: 14px;
+    line-height: 1.14;
+    margin-bottom: 28px;
+    @include tablet {
+      width: 252px;
+      margin-bottom: 40px;
+    }
+    @include desktop {
+      line-height: 1.5;
+    }
+  }
+
+  .apple {
+    position: relative;
+    width: 280px;
+    height: 309px;
+
+    @include tablet {
+      width: 357px;
+      height: 394px;
+    }
+
+    @include desktop {
+      width: 550px;
+      height: 604px;
+    }
+
+    &-image {
+      position: absolute;
+      z-index: 2;
+      left: 42px;
+
+      @include tablet {
+        left: 54px;
+      }
+
+      @include desktop {
+        left: 84px;
+      }
+    }
+
+    &-ellipse {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      width: 256px;
+      height: 256px;
+
+      background-color: $white;
+      border-radius: 50%;
+
+      @include tablet {
+        left: 16px;
+        bottom: 16px;
+        width: 326px;
+        height: 326px;
+      }
+
+      @include desktop {
+        left: 24px;
+        bottom: 24px;
+        width: 502px;
+        height: 502px;
+      }
+    }
+
+    &-shadow {
+      position: absolute;
+      left: 79px;
+      bottom: 38px;
+      background: $radial-gr;
+      filter: blur(6.61818px);
+      width: 128px;
+      height: 44px;
+      z-index: 1;
+      @include tablet {
+        left: 100px;
+        bottom: 48px;
+        width: 164px;
+        height: 56px;
+      }
+      @include desktop {
+        left: 155px;
+        bottom: 75px;
+        width: 252px;
+        height: 87px;
+      }
+    }
+
+    &-border {
+      position: absolute;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 280px;
+      border: 3px solid $ellipse-border;
+      border-radius: 50%;
+
+      @include tablet {
+        height: 357px;
+      }
+
+      @include desktop {
+        height: 550px;
+        border-width: 5px;
+      }
+    }
+  }
+
+  // transparent apples for tablet only
+  .apple-transparent {
+    display: none;
+
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+      display: block;
+      margin-bottom: 68px;
+    }
+  }
+}
