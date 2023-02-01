@@ -6,7 +6,6 @@
     position: fixed;
     width: 100vw;
     top: 0;
-    left: 0;
     z-index: 999;
   }
 }
@@ -41,6 +40,10 @@
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  transition: transform, $trans;
+  &:hover {
+    transform: rotate(180deg);
+  }
 }
 
 .mob-menu {
@@ -51,7 +54,13 @@
   position: absolute;
   right: 20px;
   overflow: auto;
-  z-index: 5;
+  z-index: 10;
+  transition: transform, $trans;
+  transform: translateX(0);
+}
+
+.mob-menu.is-hidden {
+  transform: translateX(150%);
 }
 
 .mob-close {
