@@ -115,10 +115,10 @@
   line-height: calc(16 / 14);
   text-decoration: none;
   color: $black;
-  transition: color, text-decoration-line, $trans;
+  transition: color $trans, text-decoration $trans;
   &:hover,
   &:focus {
-    text-decoration-line: underline;
+    text-decoration: underline;
     color: $fresh-green;
   }
 }
