@@ -161,7 +161,7 @@
   font-size: 14px;
   line-height: 16px;
   color: $dark;
-  transition: color, text-decoration-line, 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color $trans, text-decoration-line $trans;
   &:hover,
   &:focus {
     text-decoration-line: underline;
@@ -300,7 +300,8 @@
   font-size: 13px;
   line-height: 150%;
   color: $dark;
-  border: 0.854167px solid $green;
+  border: 1px solid $green;
+  transition: border-color $trans;
   @include mobile {
     margin: 20px 0;
     margin-left: auto;
@@ -309,7 +310,7 @@
     font-size: 13px;
     line-height: 150%;
     color: $dark;
-    border: 0.854167px solid $green;
+    border: 1px solid $green;
   }
   @include tablet {
     margin: 0 0 0 13px;

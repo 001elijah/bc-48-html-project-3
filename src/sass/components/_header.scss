@@ -6,7 +6,7 @@
     position: fixed;
     width: 100vw;
     top: 0;
-    z-index: 999;
+    z-index: 19;
   }
 }
 
@@ -41,7 +41,7 @@
   padding: 0;
   z-index: 10;
   transition: transform, $trans;
-  &:hover {
+  &:active {
     transform: rotate(180deg);
   }
 }
@@ -115,10 +115,10 @@
   line-height: calc(16 / 14);
   text-decoration: none;
   color: $black;
-  transition: color, text-decoration-line, $trans;
+  transition: color $trans, text-decoration $trans;
   &:hover,
   &:focus {
-    text-decoration-line: underline;
+    text-decoration: underline;
     color: $fresh-green;
   }
 }
