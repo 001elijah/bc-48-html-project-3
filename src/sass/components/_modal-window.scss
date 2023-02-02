@@ -46,7 +46,8 @@
     width: 320px;
     height: 449px;
     padding: 32px 20px;
-    @media screen and(min-width:768px){
+
+    @media screen and(min-width:768px) {
         padding: 32px 32px;
     }
 
@@ -64,6 +65,7 @@
         width: 458px;
         height: 449px;
     }
+
     transform: translate(-50%, -50%) scale(1);
     transition: transform $trans;
 
@@ -96,7 +98,7 @@
     background: $white;
 
     border: 1px solid $yellow;
-    box-shadow: inset  $shadow1;
+    box-shadow: inset $shadow1;
     border-radius: 30px;
 
     padding: 14px 12px;
@@ -120,7 +122,8 @@
         background: $white;
 
     }
-/*перевірка валідності*/
+
+    /* валідность введених значень*/
     &:not(:placeholder-shown):invalid {
         border: 1px solid $btn;
     }
@@ -133,34 +136,36 @@
 .modal-errormes__email,
 .modal-errormes__tel,
 .modal-errormes__name,
-.modal-error__mes{
+.modal-error__mes {
     position: absolute;
     bottom: -17px;
-    left:28px;
+    left: 28px;
 
     display: none;
     font-weight: 500;
     font-size: 11px;
     line-height: 1.4;
     color: #FF705D;
+
     @media screen and (min-width:768px) {
         font-size: 13px;
     }
 
-    &::before{
+    &::before {
         content: '';
         width: 12px;
         height: 12px;
         background-image: url('../images/modal-window/icon-warning.svg');
         position: absolute;
-        left:-16px;
-        top:2px;
+        left: -16px;
+        top: 2px;
     }
 }
 
-.modal-error__name:not(:placeholder-shown):invalid + .modal-errormes__name,
-.modal-error__tel:not(:placeholder-shown):invalid + .modal-errormes__tel,
-.modal-error__email:not(:placeholder-shown):invalid + .modal-errormes__email{
+/* меседж щодо невалідності введенних значень*/
+.modal-error__name:not(:placeholder-shown):invalid+.modal-errormes__name,
+.modal-error__tel:not(:placeholder-shown):invalid+.modal-errormes__tel,
+.modal-error__email:not(:placeholder-shown):invalid+.modal-errormes__email {
     display: block;
 }
 
@@ -174,6 +179,33 @@
     margin-left: 12px;
 
     text-align: left;
+}
+
+.btn-error__msg {
+    position: absolute;
+    bottom: 79px;
+    left: 77px;
+
+    @media screen and(min-width:768px) {
+        left: 146px;
+    }
+
+    display: none;
+}
+
+.btn-error__svg {
+    position: relative;
+}
+
+.btn-error__text {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FAEDEB;
 }
 
 .modal-form__button {
@@ -203,44 +235,27 @@
     &:focus {
         cursor: pointer;
     }
-/* перевірка валідності форми вцілому*/
+
+    /* перевірка валідності форми вцілому*/
     .modal-form:valid & {
         background-color: $fresh-green;
         border: 2px solid $green;
     }
+
+    /*зміна кнопки при невалід формі */
     .modal-form:invalid &:active,
     .modal-form:invalid &:hover {
         background-color: $white;
         border: 2px solid $btn;
     }
-    .modal-form:invalid &:active + .error-msg,
-    .modal-form:invalid &:hover + .error-msg{
+
+    /*повідомлення на батоні про обовязкові поля*/
+    .modal-form:invalid &:active+.btn-error__msg {
         display: block;
-}
+    }
+
     .modal-form:invalid &:active .modal-error__mes,
-    .modal-form:invalid &:active .modal-error__mes{
+    .modal-form:invalid &:active .modal-error__mes {
         display: block;
     }
-}
-.error-msg{
-    position: absolute;
-    bottom: 79px;
-    left: 77px;
-    @media screen and(min-width:768px) {
-        left: 146px;
-    }
-    display: none;
-}
-.error-msg__svg{
-    position: relative;
-}
-.error-msg__text{
-    position: absolute;
-    top:16px;
-    left: 16px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    color: #FAEDEB;
 }
