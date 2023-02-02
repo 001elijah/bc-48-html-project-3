@@ -250,7 +250,8 @@
     }
 
     /*повідомлення на батоні про обовязкові поля*/
-    .modal-form:invalid &:active+.btn-error__msg {
+    .modal-form:invalid &:active+.btn-error__msg,
+    .modal-form:invalid &:hover+.btn-error__msg  {
         display: block;
     }
 
